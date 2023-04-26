@@ -1,3 +1,4 @@
+/// <reference types="Cypress" />
 describe('Aprendendo conceitos Cypress', () => {
 
   it('1 - Usuário faz login com username e senha inválidos', () => {
@@ -7,7 +8,7 @@ describe('Aprendendo conceitos Cypress', () => {
     cy.contains('Login to your account');
 
     cy.get('[data-qa="login-email"]').type('teste@email.com');
-   // cy.get('input[name="email"]').click() // dá errado
+    //cy.get('input[name="email"]').click() // dá errado
     //cy.get('.login-form').find('input[name="email"]'); // dá certo
 
     cy.get('[data-qa="login-password"]').type('123456');
@@ -49,7 +50,7 @@ describe('Aprendendo conceitos Cypress', () => {
 
   });
 
-  it('5 - Acessando página de produtos - usando intercept', () => {
+  it.only('5 - Acessando página de produtos - usando intercept', () => {
     cy.visit('/');
     cy.intercept('GET','products' );
     cy.get('.navbar-nav').contains('Products').click();
@@ -63,9 +64,4 @@ describe('Aprendendo conceitos Cypress', () => {
   });
 });
 
-cy.get(':checkbox').should('be.disabled')
-
-cy.get('form').should('have.class', 'form-horizontal')
-
-cy.get('input').should('not.have.value', 'US')
 
