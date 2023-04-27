@@ -1,0 +1,25 @@
+{
+  "name": "cursoprimeirospassoscypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run --spec 'cypress/e2e/spec.cy.js'",
+    "cy:run:qa": "cypress run -C cypress-qa.config.js",
+    "cy:run:chrome": "cypress run --headed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalinnovationone/cursoPrimeirosPassosCypress.git"
+  },
+  "author": "Carolina Santana Louzada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digitalinnovationone/cursoPrimeirosPassosCypress/issues"
+  },
+  "homepage": "https://github.com/digitalinnovationone/cursoPrimeirosPassosCypress#readme",
+  "devDependencies": {
+    "cypress": "^12.10.0"
+  }
+}
