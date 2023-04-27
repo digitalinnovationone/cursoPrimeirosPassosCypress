@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run --spec 'cypress/e2e/spec.cy.js'",
+    "cy:run:qa": "cypress run -C cypress-qa.config.js",
+    "cy:run:chrome": "cypress run --headed"
   },
   "repository": {
     "type": "git",

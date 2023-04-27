@@ -93,7 +93,7 @@ describe('Aprendendo conceitos Cypress', () => {
    
   });
 
-  it.only('6 - GET Produtos retorna 200 - usando request', () => {
+  it('6 - GET Produtos retorna 200 - usando request', () => {
    
     cy.request('GET', 'api/productsList').should((response)=>{
       expect(response.status).to.be.eq(200);
